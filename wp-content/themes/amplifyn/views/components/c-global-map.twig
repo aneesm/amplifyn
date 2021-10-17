@@ -1,0 +1,16 @@
+ <section class="global">
+  <div class="container">
+    <div class="global__col-left">
+      <h2 class="featured global__title">{{ component['global__title'] }}</h2>
+      <p class="global__text">{{ component['global__content'] }}</p>
+    </div>
+    <div class="global__col-right">
+      {% for flag in component['global__flags'] %}
+        <div class="global__flag">
+          <img class="global__flag-flag" src="{{ flag.image.url }}"/>
+          <span class="global__flag-name">{{ flag.title }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

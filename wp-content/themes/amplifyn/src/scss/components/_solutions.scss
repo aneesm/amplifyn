@@ -1,0 +1,161 @@
+/**
+SOLUTIONS
+solutions component
+**/
+
+.solutions {
+  @include padding(48px null 50px);
+  background: url('./assets/img/section-image.png') bottom center no-repeat;
+  background-size: 100%;
+
+  @include grid-media($md) {
+    @include padding(112px null 93px);
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__left {
+    @include margin(null null 40px);
+    width: 100%;
+
+    @include grid-media($sm) {
+      @include margin(null 32px 0 null);
+      width: 30%;
+    }
+
+    @include grid-media($lg) {
+      max-width: 368px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include grid-media($sm) {
+      width: calc(70% - 32px);
+    }
+
+    @include grid-media($lg) {
+      max-width: 768px;
+    }
+  }
+
+  &__col {
+    @include padding(32px);
+    background: $dark-blue;
+    border-radius: 4px;
+    position: relative;
+
+    &:not(:last-child) {
+      @include margin(null null 32px null);
+    }
+
+    &:nth-last-child(-n + 2):nth-child(2n + 1),
+    &:nth-last-child(-n + 2):nth-child(2n + 1) ~ div {
+      @include grid-media($sm) {
+        @include margin(null null 0);
+      }
+    }
+
+    @include grid-media($sm) {
+      @include margin(null 32px null null);
+    }
+
+    * {
+      color: $white;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      background: $lighter-blue;
+    }
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      @include margin(null 0 null null);
+    }
+
+    &:first-child {
+      &:after {
+        background: url('./assets/img/accounting-firms.svg') center center no-repeat;
+      }
+    }
+
+    &:nth-child(2) {
+      &:after {
+        background: url('./assets/img/startups.svg') center center no-repeat;
+      }
+    }
+
+    &:nth-child(3) {
+      &:after {
+        background: url('./assets/img/sole-proprietors.svg') center center no-repeat;
+      }
+    }
+
+    &:nth-child(4) {
+      &:after {
+        background: url('./assets/img/smes.png') center center no-repeat;
+      }
+    }
+
+    @include grid-media($sm) {
+      width: calc(50% - 16px);
+    }
+
+    &:after {
+      background-size: contain !important;
+      content: '';
+      bottom: 0;
+      height: 150px;
+      position: absolute;
+      right: 0;
+      width: 150px;
+
+      @include grid-media($sm) {
+        height: 176px;
+        width: 176px;
+      }
+    }
+  }
+
+  &__title {
+    @include margin(null null 32px);
+
+    @include grid-media($sm) {
+      @include margin(null null 24px);
+    }
+  }
+
+  &__subtitle {
+    @include font(30, 40);
+    @include margin(null null 24px);
+  }
+
+  &__text {
+    @include font(16, 24);
+  }
+
+  &__link {
+    @include font(18, 23);
+    align-items: center;
+    color: $purple;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    &:after {
+      @include margin(null null null 9px);
+      background: url('./assets/img/right-arrow.svg') center center no-repeat;
+      content: '';
+      display: block;
+      height: 12px;
+      width: 25px;
+    }
+  }
+}

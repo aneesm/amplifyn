@@ -1,0 +1,22 @@
+ <section class="experts">
+  <div class="container">
+    <div class="experts__col-left">
+      <h2 class="experts__title">{{ component['cta__title'] }}</h2>
+      <p class="experts__text">{{ component['cta__content'] }}</p>
+      <a href="{{ component['cta__button'].url }}" class="button button--invert">{{ component['cta__button'].title }}</a>
+    </div>
+    <div class="experts__col-right">
+      <h3 class="experts__title">{{ component['cta__contact-title'] }}</h3>
+      <p class="experts__text">{{ component['cta__contact-content'] }}</p>
+      <ul class="experts__list">
+        <li class="experts__list-item experts__list-tel">
+          <a href="{{ component['cta__phone'].url }}">{{ component['cta__phone'].title }}</a><br/>
+          <a href="{{ component['cta__mobile'].url }}">{{ component['cta__mobile'].title }}</a>
+        </li>
+        <li class="experts__list-item experts__list-email">
+          <a href="{{ component['cta__contact-mail'] }}">{{ component['cta__contact-mail'].title }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+{
+    "name": "amplifyn/site",
+    "type": "project",
+    "require": {
+    },
+    "license": "Proprietary",
+    "authors": [
+        {
+            "name": "Mohamed Anees",
+            "email": "anees@dxdy.tech"
+        }
+    ]
+}

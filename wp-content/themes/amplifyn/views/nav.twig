@@ -1,0 +1,37 @@
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <a href="{{ site.url }}" class"header__logo"><img src="{{ options['header__branding']}}"/></a>
+      <div class="header__hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav class="nav js-mobile-nav">
+      <ul class="nav__items">
+        {% for item in nav_menu.get_items %}
+          {% if nav_menu.get_items is not empty %}
+            <li class="anim onload fade-in">
+              <a href="{{ item.link }}" class="js-dropdown">{{ item.title }}</a>
+              
+              {% if item.get_children %}
+                <ul class="nav__items-sub anim onload fade-in">
+                  {% for child in item.get_children %}
+                    <li><a href="{{ child.link }}">{{ child.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <a href="#" class="button button--invert">Get a quote</a>
+    </nav>
+  </div>
+</header>
+
+
+
+

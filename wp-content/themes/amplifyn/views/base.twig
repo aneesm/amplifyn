@@ -1,0 +1,30 @@
+{% block html_head_container %}
+  {% include 'html-header.twig' %}
+    {% block head %}{% endblock %}
+  </head>
+{% endblock %}
+
+  <body class="{{ body_class }}" data-template="base.twig">
+
+    <!-- Google Tag Manager (noscript) -->
+  
+    <!-- End Google Tag Manager (noscript) -->
+
+    {% include 'icon-sprite.twig' %}
+
+    {% block nav %}
+      {% include 'nav.twig' %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+      <footer class="footer">
+        {% include 'footer.twig' %}
+      </footer>
+    {% endblock %}
+
+    {{ function('wp_footer') }}
+  </body>
+</html>

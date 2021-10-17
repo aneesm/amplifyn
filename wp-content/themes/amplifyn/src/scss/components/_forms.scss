@@ -1,0 +1,19 @@
+/**
+FORM
+form styles
+**/
+
+.form {
+  align-items: flex-start;
+  display: flex;
+}
+
+input[type="text"] {
+  @include padding(10px 12px 9px);
+  border: 1px solid $gray2;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: rgba($black, .2);
+  }
+}

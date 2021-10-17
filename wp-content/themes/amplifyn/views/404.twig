@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<section class="about-hero">
+  <div class="container">
+    <h1 class="about-hero__heading--js anim onload fade-in-bottom">{{ options['404__title'] }}</h1>
+    <a class="anim onload fade-in-bottom" href="{{ options['404__link'].url }}">{{ options['404__link'].title }}</a>
+  </div>
+</section>
+
+{% endblock %}

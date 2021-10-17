@@ -1,0 +1,110 @@
+.image-beside-text {
+  .container {
+    @include padding(0);
+
+    @include grid-media($md) {
+      display: grid;
+      grid-template-columns: 1fr 560px;
+    }
+  }
+
+  &__image-wrapper,
+  &__content-wrapper {
+    @include padding(null 16px);
+
+    @include grid-media($md) {
+      @include padding(null 0);
+    }
+  }
+
+  &__image-wrapper {
+    @include margin(null null 48px);
+    position: relative;
+
+    @include grid-media($sm) {
+      @include margin(null null 0);
+    }
+
+    img {
+      width: 100%;
+
+      @include grid-media($md) {
+        @include margin(60px auto);
+
+        width: auto;
+      }
+    }
+
+    &:before {
+      @include grid-media($md) {
+        content: '';
+        background-size: contain;
+        background: url('assets/img/dot_pattern_2.svg') center center no-repeat;
+        top: 60px;
+        height: 196px;
+        position: absolute;
+        left: 85px;
+        width: 52px;
+      }
+    }
+  }
+
+  &__backdrop {
+    background: $lighter-blue;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    z-index: -1;
+
+    @include grid-media($md) {
+      height: 552px;
+      left: -20%;
+      top: 0;
+      width: 442px;
+    }
+  }
+
+  &__content-wrapper {
+    h2 {
+      @include margin(null null 32px);
+    }
+
+    ul {
+      * {
+        @include font(18, 28);
+      }
+
+      li {
+        @include padding(null null null 40px);
+        @include margin(null null 16px);
+
+        position: relative;
+
+        @include grid-media($md) {
+          @include margin(null null 32px);
+        }
+
+        &:before {
+          background: url('./assets/img/check-square.svg') center center no-repeat;
+          background-size: contain;
+          content: '';
+          height: 18px;
+          position: absolute;
+          left: 0;
+          top: 5px;
+          width: 18px;
+        }
+
+        &:last-child {
+          @include margin(null null 32px);
+
+          @include grid-media($md) {
+            @include margin(null null 40px);
+          }
+        }
+      }
+    }
+  }
+}

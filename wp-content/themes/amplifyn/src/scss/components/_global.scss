@@ -1,0 +1,111 @@
+/**
+GLOBAL
+we are global component
+**/
+
+.global {
+  @include margin(null null 48px);
+  @include padding(32px null);
+  background: url('./assets/img/world-map.svg') $dark-blue center left no-repeat;
+  position: relative;
+
+  &:before {
+    content: '';
+    background: linear-gradient(180deg, #0845A7 0%, #0845A700 100%) 0% 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  @include grid-media($md) {
+    @include margin(null null 110px);
+    @include padding(100px null);
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__title,
+  &__text {
+    color: $white;
+  }
+
+  &__title {
+    @include margin(null null 16px);
+
+    @include grid-media($sm) {
+      @include margin(null null 32px);
+    }
+  }
+
+  &__col-left,
+  &__col-right {
+    width: 100%;
+
+    @include grid-media($sm) {
+      width: 50%;
+    }
+  }
+
+  &__col-left {
+    @include margin(null 32px 32px null);
+
+    @include grid-media($md) {
+      @include margin(null null 0);
+      max-width: 466px;
+      width: 100%;
+    }
+  }
+
+  &__col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include grid-media($sm) {
+      @include padding(40px null null);
+      flex-direction: row;
+    }
+
+    @include grid-media($md) {
+      @include margin(null null null auto);
+      max-width: 430px;
+      width: 100%;
+    }
+  }
+
+  &__flag {
+    @include margin(null null 32px);
+    display: flex;
+    align-items: center;
+
+    @include grid-media($sm) {
+      @include margin(null null 0);
+      flex-direction: column;
+    }
+
+    &-name {
+      @include font(18, 22);
+      color: $white;
+
+      @include grid-media($sm) {
+        @include font(22, 26);
+      }
+    }
+
+    &-flag {
+      @include margin(null 32px null null);
+      max-width: 64px;
+
+      @include grid-media($sm) {
+        @include margin(null 0 18px);
+        max-width: 128px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.error404 {
+  .about-hero {
+    @include grid-media($md) {
+      height: 620px;
+    }
+
+    @include grid-media($lg) {
+      height: 100%;
+    }
+
+    .container {
+      h1 {
+        @include margin(null null 60px);
+      }
+    } 
+  }
+}

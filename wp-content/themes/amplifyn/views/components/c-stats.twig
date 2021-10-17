@@ -1,0 +1,27 @@
+<section class="strength">
+  <div class="container">
+    <div class="strength__col-left">
+      <h2 class="strength__title featured">{{ component['stat__title'] }}</h2>
+      <p class="strength__text">{{ component['stat__content'] }}</p>
+
+      <ul class="strength__stats">
+        {% for stats in component['stat__stats'] %}
+          <li class="strength__stats-item">
+            <h2 class="strength__stats-title">{{ stats.number }}</h2>
+            <p class="strength__stats-text">{{ stats.text }}</p>
+          </li>
+       {% endfor %}
+      </ul>
+    </div>
+    <div class="strength__col-right">
+      <ul class="strength__list">
+       {% for items in component['stat__items'] %}
+        <li class="strength__list-item">
+          <h3 class="strength__list-title">{{ items.title }}</h3>
+          <p class="strength__list-text">{{ items.content }}</p>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

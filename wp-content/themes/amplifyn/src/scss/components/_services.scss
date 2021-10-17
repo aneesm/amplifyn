@@ -1,0 +1,46 @@
+/**
+SERVICES
+services component
+**/
+
+.services {
+  @include padding(48px null 54px);
+
+  @include grid-media($md) {
+    @include padding(112px null 84px);
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__title {
+    @include margin(null null 16px null);
+    align-self: flex-start;
+    width: 100%;
+
+    @include grid-media($sm) {
+      @include margin(null 32px null null);
+      width: 40%;
+    }
+
+    @include grid-media($lg) {
+      max-width: 468px;
+    }
+  }
+
+  &__text {
+    @include font(18, 28);
+    color: $black;
+
+    @include grid-media($sm) {
+      width: calc(60% - 32px);
+    }
+
+    @include grid-media($lg) {
+      max-width: 668px;
+    }
+  }
+}

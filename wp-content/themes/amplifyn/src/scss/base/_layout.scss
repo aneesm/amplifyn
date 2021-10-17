@@ -1,0 +1,49 @@
+/**
+* Site-wide layout styling
+*/
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+body {
+  @include padding(61px null null);
+
+  @include grid-media($sm) {
+    @include padding(97px null null);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+section {
+  position: relative;
+  width: 100%;
+
+  @include grid-container;
+}
+
+.container {
+  @include padding(null 16px);
+  @include margin(null auto);
+
+  @include grid-media($md) {
+    @include margin(null auto);
+
+    max-width: $container-width;
+    width: 100%;
+  }
+}
+
+// fix for input line-height issues on Safari
+input::-webkit-input-placeholder {
+  line-height: normal !important;
+}

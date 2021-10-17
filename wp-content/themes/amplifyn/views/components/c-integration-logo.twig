@@ -1,0 +1,13 @@
+<section class="integration">
+  <div class="container">
+    <h6>{{ component['logo__title'] }}</h6>
+
+    <div class="integration__logos">
+     {% for logos in component['logo__logos'] %}
+        <a href="{{ logos.link.url }}" class="integration__logo">
+          <img src="{{ logos.image.url }}">
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

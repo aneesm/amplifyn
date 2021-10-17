@@ -1,0 +1,158 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+
+  @include grid-media($lg) {
+    flex-direction: row-reverse;
+  }
+
+  &__slider-wrapper {
+    @include padding(48px 16px null);
+
+    align-items: center;
+    background: $lightest-blue;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include grid-media($lg) {
+      @include padding(0 null null);
+
+      align-items: flex-start;
+      width: 40%;
+    }
+  }
+
+  &__slider {
+    outline: none;
+    position: relative;
+
+    @include grid-media($lg) {
+      right: 16%;
+    }
+
+    @include grid-media($xxl) {
+      right: 25%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .splide__track {
+      z-index: 1;
+
+      @include grid-media($lg) {
+        width: 619px;
+      }
+    }
+
+    .splide__pagination {
+      bottom: -10%;
+
+      @include grid-media($md) {
+        bottom: -6%;
+      }
+
+      @include grid-media($lg) {
+        @include padding(0);
+
+        left: auto;
+      }
+    }
+
+    .splide__pagination__page {
+      background: $lighter-blue;
+      border-radius: 0;
+      height: 4px;
+      opacity: 1;
+      width: 24px;
+
+      &.is-active {
+        background: $lighter-blue;
+        opacity: 0.25;
+        transform: none;
+      }
+    }
+  }
+
+  &__text {
+    @include padding(60% 16px 48px);
+    @include margin(-40% null null);
+
+    align-items: flex-start;
+    background: $dark-blue;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+
+    @include grid-media($md) {
+      @include padding(50% null null);
+    }
+
+    @include grid-media($lg) {
+      @include padding(64px 70px 64px 136px);
+      @include margin(0 null null);
+
+      width: 60%;
+    }
+
+    h1,
+    p {
+      color: $white;
+    }
+
+    h1 {
+      @include font(40, 54);
+      @include margin(null null 16px);
+
+      max-width: 243px;
+      width: 100%;
+
+      @include grid-media($sm) {
+        max-width: 100%;
+      }
+
+      @include grid-media($lg) {
+        @include font(58, 72);
+        @include margin(null null 24px);
+
+        max-width: 568px;
+        letter-spacing: 0.01px
+      }
+    }
+
+    p {
+      @include font(18, 28);
+      @include margin(null null 60px);
+
+      font-weight: $font-normal;
+      width: 100%;
+
+      @include grid-media($lg) {
+        @include margin(null null 40px);
+
+        max-width: 468px;
+      }
+    }
+
+    a {
+      @include padding(null 30px);
+    }
+
+    &:before {
+      @include grid-media($lg) {
+        content: '';
+        background-size: contain;
+        background: url('./assets/img/dot_pattern_1.svg') center center no-repeat;
+        bottom: 25px;
+        height: 52px;
+        position: absolute;
+        right: 10px;
+        width: 100px;
+      }
+    }
+  }
+}

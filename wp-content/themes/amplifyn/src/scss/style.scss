@@ -1,0 +1,52 @@
+/*!
+Theme Name: Amplifyn
+Theme URI: http://amplifyn.com
+Author: Mohamed Anees
+Description: A theme for Amplifyn site
+Version: 1.0
+*/
+
+// Bourbon
+// =====================
+@import "../../node_modules/bourbon/core/bourbon";
+@import "../../node_modules/bourbon-neat/core/neat";
+
+// Reset Styles
+// ======================
+@import "base/reset";
+
+// General Settings
+// =====================
+@import "mixins/index";
+@import "constants/index";
+@import "functions/index";
+
+// Other Vendor Styles
+// ======================
+@import "vendor/aos";
+
+// Utility
+// ======================
+@import "utility";
+
+// Site Styles
+// ======================
+@import "base/icons";
+@import "base/layout";
+
+
+// Components
+// ======================
+@import "components/button";
+@import "components/experts";
+@import "components/footer";
+@import "components/forms";
+@import "components/global";
+@import "components/header";
+@import "components/hero";
+@import "components/image-beside-text";
+@import "components/integration";
+@import "components/intro-text";
+@import "components/services";
+@import "components/solutions";
+@import "components/strength";

@@ -1,0 +1,322 @@
+{
+    "key": "group_610260259be22",
+    "title": "Page : Default Landing Page",
+    "fields": [
+        {
+            "key": "field_6102635a4f02a",
+            "label": "Flexible Components",
+            "name": "landing__flex",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_610263746ca5c": {
+                    "key": "layout_610263746ca5c",
+                    "name": "c-hero-slider",
+                    "label": "Hero Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_610263b44f02b",
+                            "label": "Hero",
+                            "name": "c-hero",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_61023a6fcf2b1"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_616c487b169a6": {
+                    "key": "layout_616c487b169a6",
+                    "name": "c-integration-logo",
+                    "label": "Integration Logo",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_616c488f169a7",
+                            "label": "Integration Logo",
+                            "name": "c-integration-logo",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_616c47d810a2c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_616c5234f80b4": {
+                    "key": "layout_616c5234f80b4",
+                    "name": "c-intro-text",
+                    "label": "Intro Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_616c5240f80b5",
+                            "label": "Intro Text",
+                            "name": "c-intro-text",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_616c51af85a15"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_616c57a84444e": {
+                    "key": "layout_616c57a84444e",
+                    "name": "c-image-beside-text",
+                    "label": "Image Beside Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_616c57b34444f",
+                            "label": "Image Beside Text",
+                            "name": "c-image-beside-text",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_616c56c3ca548"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_616c6eb1abc19": {
+                    "key": "layout_616c6eb1abc19",
+                    "name": "c-grid-boxes",
+                    "label": "Grid Boxes",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_616c6ec0abc1a",
+                            "label": "Grid Boxes",
+                            "name": "c-grid-boxes",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_616c6de27a270"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_616c7119a06c8": {
+                    "key": "layout_616c7119a06c8",
+                    "name": "c-services-text",
+                    "label": "Services Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_616c7142a06c9",
+                            "label": "Services Text",
+                            "name": "c-services-text",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_616c70ac41994"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_616c72d0bf5bb": {
+                    "key": "layout_616c72d0bf5bb",
+                    "name": "c-global-map",
+                    "label": "Global Map",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_616c72ddbf5bc",
+                            "label": "Global Map",
+                            "name": "c-global-map",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_616c7238217b0"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_616c75a2e6ae2": {
+                    "key": "layout_616c75a2e6ae2",
+                    "name": "c-cta",
+                    "label": "Call to action",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_616c75b6e6ae3",
+                            "label": "Call to action",
+                            "name": "c-cta",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_616c7476e1a83"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_616c831190303": {
+                    "key": "layout_616c831190303",
+                    "name": "c-stats",
+                    "label": "Stats",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_616c831790304",
+                            "label": "Stats",
+                            "name": "c-stats",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_616c820b49a7d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1634501434
+}

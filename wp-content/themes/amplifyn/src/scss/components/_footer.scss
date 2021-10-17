@@ -1,0 +1,212 @@
+/**
+FOOTER
+footer styles
+**/
+
+.footer {
+  @include padding(48px null);
+  background: $dark-gray;
+
+  @include grid-media($sm) {
+    @include padding(64px null 17px);
+  }
+
+  * {
+    color: $white;
+  }
+
+  &__small-title {
+    @include font(16, 24);
+  }
+
+  &__subtitle {
+    @include font(22, 31);
+  }
+
+  &__top {
+    @include margin(null null 48px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include grid-media($sm) {
+      @include margin(null null 0);
+      flex-direction: row;
+    }
+
+    @include grid-media($md) {
+      @include padding(null null 58px);
+    }
+
+    &-logo {
+      @include margin(null null 48px);
+      width: 100%;
+
+      @include grid-media($md) {
+        @include margin(null 12% 0 null);
+        width: auto;
+      }
+
+      @include grid-media($md) {
+
+      }
+    }
+
+    &-image {
+      @include margin(null null 17px);
+
+      @include grid-media($sm) {
+        @include margin(null null 24px);
+      }
+    }
+
+    &-sitemap {
+      @include margin(null null 50px);
+
+      @include grid-media($sm) {
+        width: 50%;
+      }
+
+      @include grid-media($md) {
+        @include margin(null null 0);
+        max-width: 292px;
+        width: 100%;
+      }
+
+      .footer__subtitle {
+        @include margin(null null 24px);
+      }
+
+      .footer__sitemap-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+  
+      .footer__sitemap-col {
+        width: 50%;
+
+        @include grid-media($md) {
+          width: auto;
+        }
+
+        > li {
+          line-height: 1;
+
+          &:not(:last-child) {
+            @include margin(null null 16px);
+          }
+
+          a {
+            @include font(18, 21);
+            color: $white;
+          }
+        }
+
+        &:last-child {
+          @include padding(null 26px null null);
+
+          @include grid-media($sm) {
+            @include padding(null 0 null null);
+          }
+        }
+      }
+    }
+  }
+
+  &__top-subscribe {
+    @include grid-media($sm) {
+      width: 50%;
+    }
+
+    @include grid-media($md) {
+      @include margin(null null null auto);
+      max-width: 381px;
+      width: 100%;
+    }
+
+    input {
+      @include margin(null null 20px null);
+      width: 100%;
+
+      @include grid-media($md) {
+        @include margin(null 16px 0 null);
+      }
+    }
+
+    .footer__small-title {
+      @include margin(null null 16px);
+    }
+
+    .footer__subscribe-form {
+      .form {
+        flex-direction: column;
+
+        @include grid-media($md) {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    .footer__social {
+      @include padding(null null 16.5px);
+
+      @include grid-media($md) {
+        justify-content: flex-end;
+      }
+
+      &,
+      a {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      a {
+        &:not(:last-child) {
+          @include margin(null 16px null null);
+        }
+      }
+
+      svg {
+        max-height: 16px;
+        max-width: 16px;
+      }
+    }
+
+    &-wrapper {
+      @include padding(15px null null);
+      border-top: 1px solid rgba($white, .15);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      * {
+        @include font(12, 14);
+
+        &:not(a){
+          color: $white;
+        }
+      }
+
+      .footer__terms {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+
+          > li {
+            .footer__terms-link {
+              color: rgba($purple, .8);
+              text-decoration: underline;
+            }
+
+            &:not(:last-child) {
+              @include margin(null 16px null null);
+            }
+          }
+        }
+      }
+    }
+  }
+}

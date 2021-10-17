@@ -1,0 +1,170 @@
+/**
+STRENGTHS
+stregths component
+**/
+
+.strength {
+  @include padding(112px null null);
+
+  @include grid-media($sm) {
+    &:after {
+      background: $lightest-blue;
+      content: '';
+      height: calc(100% - 112px);
+      position: absolute;
+      right: 0;
+      top: 112px;
+      width: 50%;
+      z-index: -1;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col-left {
+    @include grid-media($sm) {
+      @include padding(null 32px null null);
+      width: 35%;
+    }
+
+    @include grid-media($lg) {
+      max-width: 468px;
+    }
+  }
+
+  &__col-right {
+    @include margin(null -16px);
+    @include padding(48px 16px);
+    background: $lightest-blue;
+
+    @include grid-media($sm) {
+      @include margin(null 0 null auto);
+      @include padding(88px 118px);
+      width: 65%;
+    }
+
+    @include grid-media($lg) {
+      max-width: 784px;
+    }
+  }
+
+  &__title {
+    @include margin(null null 16px);
+
+    @include grid-media($sm) {
+      @include margin(null null 32px);
+    }
+  }
+
+  &__text {
+    @include font(18, 28);
+    @include margin(null null 32px);
+    color: $black;
+
+    @include grid-media($sm) {
+      @include margin(null null 64px);
+    }
+  }
+
+  &__stats {
+    @include padding(null null null 26px);
+
+    @include grid-media($sm) {
+      @include padding(null null null 100px);
+    }
+
+    &-item {
+      @include margin(null null 32px);
+
+      @include grid-media($sm) {
+        @include margin(null null 75px);
+      }
+    }
+
+    &-title {
+      @include font(52, 74);
+
+      @include grid-media($sm) {
+        @include font(66, 74);
+      }
+    }
+
+    &-text {
+      @include font(18, 28);
+      color: $gray3;
+    }
+  }
+
+  &__list {
+    @include grid-media($sm) {
+      max-width: 450px;
+    }
+
+    &-item {
+      @include padding(null null null 66px);
+      position: relative;
+
+      &:not(:last-child) {
+        @include margin(null null 32px);
+      }
+
+      @include grid-media($sm) {
+        &:not(:last-child) {
+          @include margin(null null 70px);
+        }
+      }
+
+      &:before {
+        background-size: contain !important;
+        content: '';
+        height: 40px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 40px;
+      }
+
+      &:first-child {
+        &:before {
+          background: url('./assets/img/business.svg') center center no-repeat;
+        }
+      }
+
+      &:nth-child(2) {
+        &:before {
+          background: url('./assets/img/avatar.svg') center center no-repeat;
+        }
+      }
+
+      &:nth-child(3) {
+        &:before {
+          background: url('./assets/img/checklist.svg') center center no-repeat;
+        }
+      }
+
+      &:nth-child(4) {
+        &:before {
+          background: url('./assets/img/science.svg') center center no-repeat;
+        }
+      }
+    }
+
+    &-title {
+      @include font(26, 38);
+      @include margin(null null 16px);
+      font-weight: $font-semi-bold;
+
+      @include grid-media($sm) {
+        @include font(30, 40);
+        @include margin(null null 24px);
+      }
+    }
+
+    &-text {
+      @include font(18, 28);
+    }
+  }
+}

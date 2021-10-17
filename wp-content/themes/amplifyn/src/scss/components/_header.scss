@@ -1,0 +1,241 @@
+/**
+HEADER
+header and navigation
+**/
+
+.header {
+  background: $white;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  @include grid-media($sm) {
+    @include padding(20px null);
+  }
+
+  .container {
+    @include grid-media($sm) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__wrapper {
+    @include margin(null -16px);
+    @include padding(16px);
+    box-shadow: 0 3px 6px #00000014;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+
+    @include grid-media($sm) {
+      @include margin(null 0);
+      @include padding(0);
+      box-shadow: none;
+    }
+  }
+
+  &__hamburger {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    height: 24px;
+    width: 24px;
+
+    @include grid-media($sm) {
+      display: none;
+    }
+
+    span {
+      background: $black;
+      border-radius: 10px;
+      height: 3px;
+      transition: all $transition-single $cubic-transition;
+      width: 100%;
+    }
+
+    &.active {
+      span {
+        &:first-child {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          transform: translateX(-20px);
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        &:last-child {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+
+        @include grid-media($sm) {
+          opacity: 1 !important;
+          transform: none !important;
+          visibility: visible !important;
+        }
+      }
+    }
+  }
+
+  .nav {
+    @include margin(null -16px null);
+    @include padding(32px null);
+    background: $white;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    display: none;
+
+    @include grid-media($sm) {
+      @include margin(null 0);
+      @include padding(0 null);
+      background: none;
+      display: flex;
+      height: auto;
+      overflow: unset;
+    }
+
+    &__items {
+      @include margin(null null 16px);
+      display: inline-block;
+      width: 100%;
+
+      @include grid-media($sm) {
+        @include margin(null null 0);
+
+        width: auto;
+
+        &,
+        > li {
+          align-items: center;
+          display: flex;
+        }
+      }
+
+      > li {
+        @include margin(null null 32px);
+        @include padding(null 16px);
+
+        @include grid-media($sm) {
+          @include margin(null 40px null null);
+          position: relative;
+        }
+
+        &:hover {
+          @include grid-media($sm) {
+            .nav__items-sub {
+              display: block;
+            }
+          }
+        }
+
+        > a {
+          @include font(18, 23);
+          color: $black;
+        }
+
+        &:last-child {
+          &,
+          > a {
+            @include margin(null null 16px);
+            display: block;
+
+            @include grid-media($sm) {
+              @include margin(null null 0);
+            }
+          }
+
+          > a {
+            position: relative;
+
+            &:after {
+              background: url('./assets/img/ic-chevron-down.svg') center center no-repeat;
+              background-size: 15px 8px;
+              content: '';
+              height: 8px;
+              position: absolute;
+              right: 0;
+              top: 8px;
+              transition: all $transition-single $cubic-transition;
+              width: 12px;
+            }
+
+            @include grid-media($sm) {
+              @include padding(null 30px null null);
+            }
+
+            &.active {
+              &:after {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+
+        @include grid-media($sm) {
+          @include margin(null null 0);
+          @include padding(null 0);
+        }
+
+        .nav__items-sub {
+          @include margin(null -16px null);
+          @include padding(20px 16px);
+          background: $lightest-blue;
+          display: none;
+
+          @include grid-media($sm) {
+            position: absolute;
+            top: 40px;
+            width: 150px;
+          }
+
+          > li {
+            &:not(:last-child) {
+              @include margin(null null 24px);
+            }
+
+            @include grid-media($sm) {
+              @include margin(null null 0);
+            }
+
+            a {
+              @include font(16, 21);
+              color: $black;
+            }
+
+            &:last-child {
+              a {
+                @include margin(null null 0);
+              }
+            }
+
+            @include grid-media($sm) {
+              &:not(:last-child) {
+                @include margin(null null 15px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .button {
+    @include font(16, 20);
+    @include margin(null null null 16px);
+    display: inline-block;
+    text-align: center;
+    width: 94%;
+
+    @include grid-media($sm) {
+      @include font(18, 21);
+      width: auto;
+    }
+  }
+}

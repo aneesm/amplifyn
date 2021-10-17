@@ -1,0 +1,156 @@
+{% block html_head_container %}
+  {% include 'html-header.twig' %}
+    {% block head %}{% endblock %}
+  </head>
+{% endblock %}
+
+  <body class="{{ body_class }}" data-template="base.twig">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W25XL5F"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {% include 'icon-sprite.twig' %}
+
+    {% block nav %}
+      {% include 'nav.twig' %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    <section class="strength">
+      <div class="container">
+        <div class="strength__col-left">
+          <h2 class="strength__title featured">Numbers represent our strength</h2>
+          <p class="strength__text">We take pride in servicing our clients, enabling their growth</p>
+
+          <ul class="strength__stats">
+            <li class="strength__stats-item">
+              <h2 class="strength__stats-title">232+</h2>
+              <p class="strength__stats-text">Active clients</p>
+            </li>
+            <li class="strength__stats-item">
+              <h2 class="strength__stats-title">30+</h2>
+              <p class="strength__stats-text">Indutries served</p>
+            </li>
+            <li class="strength__stats-item">
+              <h2 class="strength__stats-title">1716+</h2>
+              <p class="strength__stats-text">No of BASes/IASes Per year</p>
+            </li>
+          </ul>
+        </div>
+        <div class="strength__col-right">
+          <ul class="strength__list">
+            <li class="strength__list-item">
+              <h3 class="strength__list-title">Client Centric Support with flexibility</h3>
+              <p class="strength__list-text">Customized solutions to address your requirements</p>
+            </li>
+            <li class="strength__list-item">
+              <h3 class="strength__list-title">Expert advice</h3>
+              <p class="strength__list-text">CIMA, ACCA, CA, CFA qualified staff</p>
+            </li>
+            <li class="strength__list-item">
+              <h3 class="strength__list-title">100% Accuracy</h3>
+              <p class="strength__list-text">Efficient & Effective work methods</p>
+            </li>
+            <li class="strength__list-item">
+              <h3 class="strength__list-title">Transparency</h3>
+              <p class="strength__list-text">Transparency into the backoffice operations and dedicated staff using tools to track performance</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="solutions">
+      <div class="container">
+        <div class="solutions__left">
+          <h2 class="solutions__title featured">Scalable solutions for your business</h2>
+          <a href="#" class="solutions__link">Learn more</a>
+        </div>
+        <div class="solutions__right">
+          <div class="solutions__col">
+            <h3 class="solutions__subtitle">Accounting firms</h3>
+            <p class="solutions__text">Let us help you enhance value to your clients while simultaneously growing your business and improving your bottom line.</p>
+          </div>
+
+          <div class="solutions__col">
+            <h3 class="solutions__subtitle">Startups</h3>
+            <p class="solutions__text">Let us help you with your Financial Services, enabling you to spend time growing your business and improving your bottom line.</p>
+          </div>
+
+          <div class="solutions__col">
+            <h3 class="solutions__subtitle">Sole Proprietors</h3>
+            <p class="solutions__text">Aspernatur voluptatum aperiam veniam quo. Necessitatibus culpa voluptatem. Atque omnis suscipit est quis minima.</p>
+          </div>
+
+          <div class="solutions__col">
+            <h3 class="solutions__subtitle">High Growth SMEs</h3>
+            <p class="solutions__text">Numquam ut possimus dolorem. Fugit ratione quas error vel ut. Consectetur accusamus ut molestiae magnam autem quae suscipit veritatis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <h2 class="services__title featured">Affordable cloud- based services</h2>
+        <p class="services__text">Backed by Data Protection ISO coupled with expert advice for your business, we understand the Financial support needs of Sole proprietors, Startups, Accounting firms and SMEs Financial Service requirements. We excel in the service offered to you and the result shown in your business. From proactive insights and custom financial reporting to third party software recommendations and controller oversight, we don't just handle your accounting needs.. we do it the way you would have done it yourself.</p>
+      </div>
+    </section>
+
+    <section class="global">
+      <div class="container">
+        <div class="global__col-left">
+          <h2 class="featured global__title">Talk to the global for your all your Finance and Accounting services..</h2>
+          <p class="global__text">Spend your time growing your business.</p>
+        </div>
+
+        <div class="global__col-right">
+          <div class="global__flag">
+            <img class="global__flag-flag" src="./wp-content/themes/amplifyn/assets/img/AUS-flag.png"/>
+            <span class="global__flag-name">Australia</span>
+          </div>
+          <div class="global__flag">
+            <img class="global__flag-flag" src="./wp-content/themes/amplifyn/assets/img/UK-flag.png"/>
+            <span class="global__flag-name">Australia</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experts">
+      <div class="container">
+        <div class="experts__col-left">
+          <h2 class="experts__title">Talk to the experts for your all your Finance and Accounting services..</h2>
+          <p class="experts__text">Spend your time growing your business.</p>
+          <a href="#" class="button button--invert">Schedule a call</a>
+        </div>
+
+        <div class="experts__col-right">
+          <h3 class="experts__title">Contact us directly</h3>
+          <p class="experts__text">Do get in touch with us to start your journey</p>
+          <ul class="experts__list">
+            <li class="experts__list-item experts__list-tel">
+              <a href="tel:769-935-1815">769-935-1815</a><br/>
+              <a href="tel:471-902-6830">471-902-6830</a>
+            </li>
+            <li class="experts__list-item experts__list-email">
+              <a href="mailto:financialservices@email.com">financialservices@email.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {% block footer %}
+      <footer class="footer">
+        {% include 'footer.twig' %}
+      </footer>
+    {% endblock %}
+
+    {{ function('wp_footer') }}
+  </body>
+</html>

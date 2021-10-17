@@ -1,0 +1,22 @@
+<section class="image-beside-text">
+  <div class="container">
+    <div class="image-beside-text__image-wrapper">
+      <div class="image-beside-text__backdrop" role="presentation"></div>
+      <img src="{{ component['image-beside-text__image'].url }}">
+    </div>
+
+     <div class="image-beside-text__content-wrapper">
+      <h2 class="featured">{{ component['image-beside-text__title'] }}</h2>
+
+      <ul>
+        {% for bullets in component['bullet_points'] %}
+          <li>
+            {{ bullets.ponit }}
+          </li>
+      {% endfor %}
+      </ul>
+
+      <a href="{{ component['image-beside-text__link'].url }}" class="button" target="{{ component['image-beside-text__link'].target }}">{{ component['image-beside-text__link'].title }} </a>
+     </div>
+  </div>
+</section>

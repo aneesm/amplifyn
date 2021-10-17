@@ -1,0 +1,33 @@
+<section class="hero">
+  <div class="hero__slider-wrapper">
+    <div class="hero__slider hero__slider--sm-js show-mobile">
+      <div class="splide__track">
+          <ul class="splide__list">
+          {% for slides in component['hero__images-sm'] %}
+            <li class="splide__slide">
+              <img src="{{ slides.image.url }}">
+            </li>
+          {% endfor %}
+          </ul>
+      </div>
+    </div>
+
+    <div class="hero__slider hero__slider--md-js show-desktop-lg">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for slides in component['hero__images-md'] %}
+            <li class="splide__slide">
+              <img src="{{ slides.image.url }}">
+            </li>
+          {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__text">
+      <h1>{{ component['hero__title'] }}</h1>
+      <p>{{ component['hero__content'] }}</p>
+      <a href="{{ component['hero__btn'].url }}" class="button">{{ component['hero__btn'].title }}</a>
+    </div>
+</section>

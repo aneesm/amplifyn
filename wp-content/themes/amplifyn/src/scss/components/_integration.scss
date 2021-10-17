@@ -1,0 +1,60 @@
+.integration {
+  @include margin(null null 48px);
+
+  @include grid-media($lg) {
+    @include margin(null null 112px);
+  }
+
+  .container {
+    @include padding(null 37px);
+  }
+  
+  h6 {
+    @include font(16, 24);
+    @include margin(null null 37px);
+
+    color: $gray3;
+    font-family: $inter;
+    font-weight: $font-thin;
+    text-align: center;
+  }
+
+  &__logos {
+    display: grid;
+    grid-gap: 35px;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+
+    @include grid-media($sm) {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+
+  &__logo {
+    img {
+      filter: grayscale(1);
+      transition: all $transition-single $cubic-transition;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+
+    &:last-child {
+      grid-column: span 2;
+
+      @include grid-media($sm) {
+        grid-column: auto;
+      }
+
+      img {
+        width: 114px;
+
+        @include grid-media($sm) {
+          width: auto;
+        }
+      }
+    }
+  }
+}

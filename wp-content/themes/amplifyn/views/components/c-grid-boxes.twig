@@ -1,0 +1,16 @@
+<section class="solutions">
+  <div class="container">
+    <div class="solutions__left">
+      <h2 class="solutions__title featured">{{ component['grid__title'] }}</h2>
+      <a href="{{ component['grid__link'].url }}" target="{{ component['grid__link'].target }}" class="solutions__link">{{ component['grid__link'].title }}</a>
+    </div>
+    <div class="solutions__right">
+      {% for grids in component['grid__boxes'] %}
+        <div class="solutions__col">
+          <h3 class="solutions__subtitle">{{ grids.title }}</h3>
+          <p class="solutions__text">{{ grids.content }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
